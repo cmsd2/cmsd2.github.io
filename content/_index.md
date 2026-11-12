@@ -29,8 +29,8 @@ knows the subject better than I do has checked them.
 - [The physics in *Oppenheimer*](https://cmsd2.github.io/oppenheimer-physics/)
   ([PDF](https://cmsd2.github.io/oppenheimer-physics/oppenheimer-physics.pdf)):
   a literature review of the physics in Christopher Nolan's film, from the
-  Born–Oppenheimer approximation to the hydrogen bomb, in the order the film
-  meets it.
+  Born–Oppenheimer approximation to thermonuclear fusion, in the order the
+  film meets it.
 
 ## Links
 
