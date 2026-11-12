@@ -1,0 +1,33 @@
+name: Check
+
+# Builds the site on every pull request, so Dependabot (and any other) PRs show
+# whether the site still builds before they reach master. The job name `build`
+# is the one to mark as a required check.
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  ZOLA_VERSION: 0.23.6
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Zola
+        run: |
+          mkdir -p "$RUNNER_TEMP/zola"
+          curl -sSfL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar -xz -C "$RUNNER_TEMP/zola"
+          echo "$RUNNER_TEMP/zola" >> "$GITHUB_PATH"
+
+      # External links are skipped: other sites going down shouldn't fail a PR.
+      - name: Check internal links
+        run: zola check --skip-external-links
+
+      - name: Build
+        run: zola build

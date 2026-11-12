@@ -1,7 +1,11 @@
 # cmsd2.github.io
 
+[![Site](https://img.shields.io/badge/site-cmsd2.github.io-blue)](https://cmsd2.github.io/)
+
 Home page, built with [Zola](https://www.getzola.org/) and deployed to GitHub
 Pages by `.github/workflows/pages.yml` on every push to `master`.
+`.github/workflows/check.yml` builds every pull request; its `build` job is
+the one to require.
 
 ```sh
 brew install zola
