@@ -21,6 +21,9 @@ A selection of things I've written. The rest are on
 
 {{ <projects github="cmsd2" /> }}
 
+Several of these install on macOS from my
+[Homebrew tap](https://github.com/cmsd2/homebrew-tap) (`brew tap cmsd2/tap`).
+
 ## Notes
 
 Texts I've written with AI as study aids. Treat them as drafts: nobody who
