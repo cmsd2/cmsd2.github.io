@@ -9,6 +9,13 @@ year = 2026
 description = "An interactive notebook front end for the Maxima computer algebra system."
 
 [[project]]
+repo = "maxima-notebook"
+url = "https://marketplace.visualstudio.com/items?itemName=cmsd2.maxima-notebook"
+language = "TypeScript"
+year = 2026
+description = "A VS Code extension for Maxima: notebooks, a debugger and a language server built on aximar's tools."
+
+[[project]]
 name = "mxpm"
 repo = "maxima-mxpm"
 language = "Rust"
