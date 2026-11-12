@@ -1,0 +1,16 @@
+{# Components are global in Zola 0.23 (Tera v2): call them from templates or content. #}
+
+{% component projects(github: string) %}
+{%- set data = load_data(path="data/projects.toml") -%}
+<table class="projects">
+<tr><th>Project</th><th>Language</th><th>Started</th><th>Description</th></tr>
+{%- for p in data.project %}
+<tr>
+<td><a href="{{ p.url or ('https://github.com/' ~ github ~ '/' ~ p.repo) }}">{{ p.name or p.repo }}</a></td>
+<td>{{ p.language }}</td>
+<td>{{ p.year }}</td>
+<td>{{ p.description }}</td>
+</tr>
+{%- endfor %}
+</table>
+{% endcomponent projects %}

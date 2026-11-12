@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ config.title }}{% endblock title %}</title>
+<meta name="description" content="{{ config.description }}">
+<meta name="author" content="{{ config.author }}">
+<link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
+</head>
+<body>
+{% block body %}{% endblock body %}
+
+<hr>
+<address>
+{%- set lm = get_env(name="LAST_MODIFIED", default="") %}
+Last modified: {{ (lm | int if lm else now(timestamp=true)) | date(format="%a %b %e %H:%M:%S %Z %Y", timezone="Europe/London") }}
+</address>
+</body>
+</html>

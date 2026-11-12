@@ -1,0 +1,69 @@
+/* LaTeX-article styling: system serif, a centred measure, booktabs tables.
+   System fonts only, no JavaScript; follows the OS dark-mode setting. */
+:root {
+  color-scheme: light dark;
+  --fg: #1d1d1f;
+  --muted: #6b6b70;
+  --rule: #d9d9de;
+  --link: #1a4d8f;
+  --visited: #5b3a8a;
+  --bg: #fdfdfb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e6e6e3; --muted: #9a9a9f; --rule: #3a3a3f;
+    --link: #8fb4ec; --visited: #b9a2e0; --bg: #161618;
+  }
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text", Cambria, Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 38em;
+  margin: 0 auto;
+  padding: 3rem 16px 2rem;
+  -webkit-font-smoothing: antialiased;
+}
+a:link { color: var(--link); }
+a:visited { color: var(--visited); }
+a { text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+h1 { font-size: 2.2rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; margin: 0 0 0.3rem; }
+h2 {
+  font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--muted); margin: 2.4rem 0 0.6rem;
+}
+hr { border: 0; border-top: 1px solid var(--rule); margin: 1.6rem 0; clear: both; }
+address { font-style: normal; color: var(--muted); }
+address.contact { font-size: 1rem; line-height: 1.5; }
+body > address:last-child { font-size: 0.85rem; }
+tt, code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.85em; }
+ul { padding-left: 1.2em; }
+li { margin: 0.25em 0; }
+
+/* booktabs: heavy top/bottom rules, light header rule, no verticals */
+table.projects {
+  border: 0; border-collapse: collapse; width: 100%;
+  border-top: 2px solid var(--fg); border-bottom: 2px solid var(--fg);
+  font-size: 1rem; margin: 1rem 0;
+}
+table.projects th, table.projects td {
+  border: 0; padding: 0.4em 0.6em; text-align: left; vertical-align: top;
+}
+table.projects th {
+  background: none; font-weight: 600; border-bottom: 1px solid var(--fg);
+}
+table.projects tr + tr td { border-top: 1px solid var(--rule); }
+table.projects td:first-child { white-space: nowrap; }
+
+img.photo { float: right; width: 128px; margin: 0 0 1rem 1.5rem; border: 0; border-radius: 2px; }
+
+@media (max-width: 600px) {
+  body { padding-top: 1.5rem; font-size: 1.0625rem; }
+  table.projects th:nth-child(2), table.projects td:nth-child(2),
+  table.projects th:nth-child(3), table.projects td:nth-child(3) { display: none; }
+  table.projects td:first-child { white-space: normal; }
+}

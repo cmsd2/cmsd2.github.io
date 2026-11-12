@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 Not Found</title>
+<link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
+</head>
+<body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+<p>Try the <a href="{{ config.base_url }}/">home page</a>.</p>
+<hr>
+<address>Zola Server at {{ config.base_url | replace(from="https://", to="") }} Port 443</address>
+</body>
+</html>

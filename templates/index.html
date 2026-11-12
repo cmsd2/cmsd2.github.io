@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+{%- if config.extra.photo %}
+<img class="photo" src="{{ get_url(path=config.extra.photo) }}" alt="Photo of {{ config.author }}">
+{%- endif %}
+
+<h1>{{ config.title }}</h1>
+
+<address class="contact">
+{%- if config.extra.location %}{{ config.extra.location }}<br>{% endif %}
+{%- if config.extra.email %}
+{%- set parts = config.extra.email | split(pat="@") %}
+Email: <tt>{{ parts[0] }} at {{ parts[1] | replace(from=".", to=" dot ") }}</tt><br>
+{%- endif %}
+{%- if config.extra.github %}
+GitHub: <a href="https://github.com/{{ config.extra.github }}">{{ config.extra.github }}</a>
+{%- endif %}
+</address>
+
+<hr>
+
+{{ section.content | safe }}
+{% endblock body %}

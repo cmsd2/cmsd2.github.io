@@ -1,0 +1,48 @@
+# Rendered by the `projects` component (templates/components.html) in this order.
+# `repo` is the GitHub repo name under the github account; `name` overrides the label;
+# `url` overrides the link (for projects hosted elsewhere).
+
+[[project]]
+repo = "aximar"
+language = "Rust"
+year = 2026
+description = "An interactive notebook front end for the Maxima computer algebra system."
+
+[[project]]
+name = "mxpm"
+repo = "maxima-mxpm"
+language = "Rust"
+year = 2026
+description = "A package manager for Maxima: search, install and update third-party packages."
+
+[[project]]
+repo = "maxima-package-index"
+language = "Python"
+year = 2026
+description = "A community package index that mxpm installs from."
+
+[[project]]
+name = "fsimp"
+repo = "fsimp-maxima"
+url = "https://github.com/QMeqGR/fsimp-maxima"
+language = "Maxima"
+year = 2025
+description = "Combined simplification routines for Maxima, behind a single <tt>fullsimp</tt> function. I'm a contributor."
+
+[[project]]
+repo = "mdview"
+language = "Rust"
+year = 2026
+description = "A read-only Markdown viewer with live reload, built on Tauri."
+
+[[project]]
+repo = "ostoo"
+language = "Rust"
+year = 2019
+description = "A hobby x86-64 kernel with a userspace shell, a VFS, a syscall layer and virtio drivers."
+
+[[project]]
+repo = "recon"
+language = "Rust"
+year = 2016
+description = "Asynchronous messaging on tokio."

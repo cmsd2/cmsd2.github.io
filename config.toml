@@ -1,0 +1,19 @@
+base_url = "https://cmsd2.github.io"
+title = "Chris Dawes"
+description = "Home page of Chris Dawes"
+author = "Chris Dawes"
+
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+[markdown]
+smart_punctuation = true
+
+[extra]
+# Drop a file in static/ and set this to show a photo top-right, e.g. "photo.jpg".
+photo = ""
+location = "London, UK"
+github = "cmsd2"
+# Shown obfuscated ("user at host dot tld") in the address block. Leave empty to hide.
+email = ""
