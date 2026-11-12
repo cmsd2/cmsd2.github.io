@@ -16,6 +16,9 @@ Email: <tt>{{ parts[0] }} at {{ parts[1] | replace(from=".", to=" dot ") }}</tt>
 {%- if config.extra.github %}
 GitHub: <a href="https://github.com/{{ config.extra.github }}">{{ config.extra.github }}</a>
 {%- endif %}
+{%- if config.extra.pgp_fingerprint %}<br>
+PGP: <tt class="fpr">{{ config.extra.pgp_fingerprint }}</tt> (<a href="{{ get_url(path=config.extra.pgp_key) }}">key</a>)
+{%- endif %}
 </address>
 
 <hr>

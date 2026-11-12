@@ -39,6 +39,8 @@ h2 {
 hr { border: 0; border-top: 1px solid var(--rule); margin: 1.6rem 0; clear: both; }
 address { font-style: normal; color: var(--muted); }
 address.contact { font-size: 1rem; line-height: 1.5; }
+/* Keep gpg's double space between fingerprint halves, but let it wrap on phones. */
+tt.fpr { white-space: pre-wrap; }
 body > address:last-child { font-size: 0.85rem; }
 tt, code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.85em; }
 ul { padding-left: 1.2em; }

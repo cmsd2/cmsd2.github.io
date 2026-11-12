@@ -17,3 +17,6 @@ location = "London, UK"
 github = "cmsd2"
 # Shown obfuscated ("user at host dot tld") in the address block. Leave empty to hide.
 email = ""
+# OpenPGP key: the armoured public key in static/, and its fingerprint as gpg prints it.
+pgp_key = "pgp.asc"
+pgp_fingerprint = "BA56 F1C0 8D52 AC64 1081  9FBF 3FCF 6A26 01AE 759E"
