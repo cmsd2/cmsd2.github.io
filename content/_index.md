@@ -34,6 +34,11 @@ knows the subject better than I do has checked them.
   a literature review of the physics in Christopher Nolan's film, from the
   Born–Oppenheimer approximation to thermonuclear fusion, in the order the
   film meets it.
+- [From the Chain Rule to the Transformer](https://cmsd2.github.io/autodiff-book/)
+  ([PDF](https://cmsd2.github.io/autodiff-book/From-the-Chain-Rule-to-the-Transformer.pdf)):
+  a theory-first textbook on automatic differentiation and neural language
+  models, from derivatives in several variables to a small transformer, with
+  its examples checked by computer algebra and some theorems proved in Lean.
 
 ## Links
 
